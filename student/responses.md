@@ -8,9 +8,9 @@ Answers and recorded model results from `submission.json`. This document does no
 
 - Record ID: 17fb482f-f7ca-452b-9e7f-3c2dd9c0747c
 
-- Record revision: 550
+- Record revision: 556
 
-- Model hash: fnv1a-adee3cf8
+- Model hash: fnv1a-596d5cb5
 
 - Readiness: Marked incomplete or not ready; missing: verification, claim, reflection, aiUse, execution
 
@@ -113,7 +113,7 @@ The recorded model JSON/expression source follows exactly as supplied. It is not
       "expressions": [
         {
           "name": "requiredMoment",
-          "expression": "",
+          "expression": "pitchInertia * requestedAcceleration - competingMoment",
           "unit": "N*m"
         }
       ]
@@ -123,17 +123,17 @@ The recorded model JSON/expression source follows exactly as supplied. It is not
       "expressions": [
         {
           "name": "dynamicPressure",
-          "expression": "",
+          "expression": "0.5 * density * airspeed * airspeed",
           "unit": "Pa"
         },
         {
           "name": "deltaCm",
-          "expression": "",
+          "expression": "elevatorDerivative * elevatorAngle",
           "unit": "1"
         },
         {
           "name": "deltaMoment",
-          "expression": "",
+          "expression": "dynamicPressure * referenceArea * referenceChord * deltaCm",
           "unit": "N*m"
         }
       ]
@@ -144,7 +144,10 @@ The recorded model JSON/expression source follows exactly as supplied. It is not
 
 ## Recorded verification status
 
-No verification record was supplied.
+Recorded as passed for the submitted model hash.
+
+- Checked at: 2026-09-17T04:05:56.914Z
+- Detail: Student artifact passed demand, baseline elevator, quadratic speed, and neutral-deflection checks.
 
 ## Recorded model runs
 

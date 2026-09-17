@@ -12,14 +12,14 @@
   },
   "record": {
     "id": "17fb482f-f7ca-452b-9e7f-3c2dd9c0747c",
-    "revision": "550",
+    "revision": "556",
     "model": {
       "moduleId": "controls",
       "modelId": "week07-student-model",
       "version": "1.0.0"
     },
-    "modelText": "{\n  \"schemaVersion\": \"week07.student-model/v1\",\n  \"id\": \"week07-student-model\",\n  \"version\": \"1.0.0\",\n  \"slots\": [\n    {\n      \"id\": \"controls.demand\",\n      \"expressions\": [\n        {\n          \"name\": \"requiredMoment\",\n          \"expression\": \"\",\n          \"unit\": \"N*m\"\n        }\n      ]\n    },\n    {\n      \"id\": \"controls.effectiveness\",\n      \"expressions\": [\n        {\n          \"name\": \"dynamicPressure\",\n          \"expression\": \"\",\n          \"unit\": \"Pa\"\n        },\n        {\n          \"name\": \"deltaCm\",\n          \"expression\": \"\",\n          \"unit\": \"1\"\n        },\n        {\n          \"name\": \"deltaMoment\",\n          \"expression\": \"\",\n          \"unit\": \"N*m\"\n        }\n      ]\n    }\n  ]\n}",
-    "modelHash": "fnv1a-adee3cf8",
+    "modelText": "{\n  \"schemaVersion\": \"week07.student-model/v1\",\n  \"id\": \"week07-student-model\",\n  \"version\": \"1.0.0\",\n  \"slots\": [\n    {\n      \"id\": \"controls.demand\",\n      \"expressions\": [\n        {\n          \"name\": \"requiredMoment\",\n          \"expression\": \"pitchInertia * requestedAcceleration - competingMoment\",\n          \"unit\": \"N*m\"\n        }\n      ]\n    },\n    {\n      \"id\": \"controls.effectiveness\",\n      \"expressions\": [\n        {\n          \"name\": \"dynamicPressure\",\n          \"expression\": \"0.5 * density * airspeed * airspeed\",\n          \"unit\": \"Pa\"\n        },\n        {\n          \"name\": \"deltaCm\",\n          \"expression\": \"elevatorDerivative * elevatorAngle\",\n          \"unit\": \"1\"\n        },\n        {\n          \"name\": \"deltaMoment\",\n          \"expression\": \"dynamicPressure * referenceArea * referenceChord * deltaCm\",\n          \"unit\": \"N*m\"\n        }\n      ]\n    }\n  ]\n}",
+    "modelHash": "fnv1a-596d5cb5",
     "fields": {
       "question": {
         "suppliedBy": "instructor",
@@ -98,7 +98,7 @@
         "expressions": [
           {
             "name": "requiredMoment",
-            "expression": "",
+            "expression": "pitchInertia * requestedAcceleration - competingMoment",
             "unit": "N*m"
           }
         ]
@@ -108,17 +108,17 @@
         "expressions": [
           {
             "name": "dynamicPressure",
-            "expression": "",
+            "expression": "0.5 * density * airspeed * airspeed",
             "unit": "Pa"
           },
           {
             "name": "deltaCm",
-            "expression": "",
+            "expression": "elevatorDerivative * elevatorAngle",
             "unit": "1"
           },
           {
             "name": "deltaMoment",
-            "expression": "",
+            "expression": "dynamicPressure * referenceArea * referenceChord * deltaCm",
             "unit": "N*m"
           }
         ]
@@ -126,5 +126,10 @@
     ]
   },
   "runs": [],
-  "verification": null
+  "verification": {
+    "modelHash": "fnv1a-596d5cb5",
+    "checkedAt": "2026-09-17T04:05:56.914Z",
+    "passed": true,
+    "detail": "Student artifact passed demand, baseline elevator, quadratic speed, and neutral-deflection checks."
+  }
 }
