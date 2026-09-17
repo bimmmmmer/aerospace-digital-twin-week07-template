@@ -6,13 +6,13 @@ Answers and recorded model results from `submission.json`. This document does no
 
 - Schema: week07.submission/v1
 
-- Record ID: 884d39fb-107b-48aa-81aa-ce7c2430f791
+- Record ID: 17fb482f-f7ca-452b-9e7f-3c2dd9c0747c
 
-- Record revision: 213
+- Record revision: 239
 
 - Model hash: fnv1a-adee3cf8
 
-- Readiness: Marked incomplete or not ready; missing: assumptions, model, prediction, verification, claim, reflection, aiUse, execution
+- Readiness: Marked incomplete or not ready; missing: prediction, verification, claim, reflection, aiUse, execution
 
 ## Supplied setup (instructor supplied)
 
@@ -35,20 +35,33 @@ Iy=5000 kg·m²; target=+0.12 rad/s²; competing=-750 N-m; density=1.225 kg/m³;
 
 **Student response:**
 ```
-Because downward force at a distance aft of CG create torque about the CG in the y axis, causing the aircraft to pitch up.
+Because downward force at a distance aft of CG create torque about the CG in the y axis, causing the aircraft to pitch up
 ```
 
 ### assumptions
 **Prompt:** Explain one supplied assumption and what could invalidate it: planar motion, fixed reference, local linear effectiveness, no trim or damping.
 
 **Student response:**
-_Missing — no response supplied._
+```
+the model should function under folowing conditions:planar motion, fixed reference, local linear effectiveness and no trim or damping.
+
+```
 
 ### model
 **Prompt:** Write your demand, dynamic-pressure, coefficient and moment equations. Identify which quantities are supplied and which are unknown.
 
 **Student response:**
-_Missing — no response supplied._
+```
+Demand = Iy * target - competing
+
+q∞ = ρV²/2
+Cm_delta = m_delta/q∞ S c
+m_delta = Cm_delta q∞ S c
+CL = L/q∞ S
+
+c: chord length
+S: wing area
+```
 
 ### prediction
 **Prompt:** Before running your own implementation, predict the sign of its elevator moment and the effect of halving airspeed. Explain the competing moment.

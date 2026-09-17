@@ -3,8 +3,6 @@
   "readiness": {
     "ready": false,
     "missing": [
-      "assumptions",
-      "model",
       "prediction",
       "verification",
       "claim",
@@ -14,8 +12,8 @@
     ]
   },
   "record": {
-    "id": "884d39fb-107b-48aa-81aa-ce7c2430f791",
-    "revision": "213",
+    "id": "17fb482f-f7ca-452b-9e7f-3c2dd9c0747c",
+    "revision": "239",
     "model": {
       "moduleId": "controls",
       "modelId": "week07-student-model",
@@ -42,12 +40,12 @@
       "physics": {
         "suppliedBy": "student",
         "locked": false,
-        "text": "Because downward force at a distance aft of CG create torque about the CG in the y axis, causing the aircraft to pitch up."
+        "text": "Because downward force at a distance aft of CG create torque about the CG in the y axis, causing the aircraft to pitch up"
       },
       "assumptions": {
         "suppliedBy": "student",
         "locked": false,
-        "text": ""
+        "text": "the model should function under folowing conditions:planar motion, fixed reference, local linear effectiveness and no trim or damping.\n"
       },
       "inputs": {
         "suppliedBy": "instructor",
@@ -57,7 +55,7 @@
       "model": {
         "suppliedBy": "student",
         "locked": false,
-        "text": ""
+        "text": "Demand = Iy * target - competing\n\nq∞ = ρV²/2\nCm_delta = m_delta/q∞ S c\nm_delta = Cm_delta q∞ S c\nCL = L/q∞ S\n\nc: chord length\nS: wing area"
       },
       "prediction": {
         "suppliedBy": "student",
