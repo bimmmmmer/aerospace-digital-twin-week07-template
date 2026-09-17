@@ -3,7 +3,6 @@
   "readiness": {
     "ready": false,
     "missing": [
-      "physics",
       "assumptions",
       "model",
       "prediction",
@@ -16,7 +15,7 @@
   },
   "record": {
     "id": "884d39fb-107b-48aa-81aa-ce7c2430f791",
-    "revision": "1",
+    "revision": "213",
     "model": {
       "moduleId": "controls",
       "modelId": "week07-student-model",
@@ -43,7 +42,7 @@
       "physics": {
         "suppliedBy": "student",
         "locked": false,
-        "text": ""
+        "text": "Because downward force at a distance aft of CG create torque about the CG in the y axis, causing the aircraft to pitch up."
       },
       "assumptions": {
         "suppliedBy": "student",
