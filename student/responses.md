@@ -8,11 +8,11 @@ Answers and recorded model results from `submission.json`. This document does no
 
 - Record ID: 17fb482f-f7ca-452b-9e7f-3c2dd9c0747c
 
-- Record revision: 239
+- Record revision: 550
 
 - Model hash: fnv1a-adee3cf8
 
-- Readiness: Marked incomplete or not ready; missing: prediction, verification, claim, reflection, aiUse, execution
+- Readiness: Marked incomplete or not ready; missing: verification, claim, reflection, aiUse, execution
 
 ## Supplied setup (instructor supplied)
 
@@ -67,7 +67,12 @@ S: wing area
 **Prompt:** Before running your own implementation, predict the sign of its elevator moment and the effect of halving airspeed. Explain the competing moment.
 
 **Student response:**
-_Missing — no response supplied._
+```
+deltaCm = dCm delta_e / d_delta_e
+since both dCm / d_delta_e and delta_e is negative, negative times negative will be positive. The moment will be positive
+
+halving the airspeed will reduce elevator moment by a factor of 4
+```
 
 ### verification
 **Prompt:** Show one independent hand calculation with units. Compare it with your model, and explain a sign, unit, or limiting-case check.

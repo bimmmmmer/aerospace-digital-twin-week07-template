@@ -3,7 +3,6 @@
   "readiness": {
     "ready": false,
     "missing": [
-      "prediction",
       "verification",
       "claim",
       "reflection",
@@ -13,7 +12,7 @@
   },
   "record": {
     "id": "17fb482f-f7ca-452b-9e7f-3c2dd9c0747c",
-    "revision": "239",
+    "revision": "550",
     "model": {
       "moduleId": "controls",
       "modelId": "week07-student-model",
@@ -60,7 +59,7 @@
       "prediction": {
         "suppliedBy": "student",
         "locked": false,
-        "text": ""
+        "text": "deltaCm = dCm delta_e / d_delta_e\nsince both dCm / d_delta_e and delta_e is negative, negative times negative will be positive. The moment will be positive\n\nhalving the airspeed will reduce elevator moment by a factor of 4"
       },
       "execution": {
         "suppliedBy": "automatic",
